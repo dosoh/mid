@@ -35,7 +35,7 @@ public class RecyclerView3Adapter extends RecyclerView.Adapter<RecyclerView3Adap
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = layoutInflater.inflate(R.layout.itme1, viewGroup, false);
+        View view = layoutInflater.inflate(R.layout.memo, viewGroup, false);
         return new ViewHolder(view);
     }
     @Override
