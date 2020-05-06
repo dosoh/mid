@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">mid</string>
     <string name="action_create">생성</string>
+    <string name="input_title">제목을 입력하세요.</string>
+    <string name="input_content">내용을 입력하세요.</string>
     <string name="save">저장</string>
 </resources>
