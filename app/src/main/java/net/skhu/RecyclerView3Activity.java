@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,7 +30,23 @@ public class RecyclerView3Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(recyclerView3Adapter);
+    }
+
+    @Override
+        public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_recycler_view3,menu);
+        return true;
+        }
+
+        public boolean onOptionsltemSelected(MenuItem item){
+        int id= item.getItemId();
+        if(id==R.id.action_create){
+            Intent intent= new Intent(this, MemoActivity.class);
+            startActivityForResult(intent,0);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+        }
 
 
     }
-}
