@@ -32,17 +32,9 @@ public class MemoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText editText_title = (EditText) findViewById(R.id.editText_title);
                 String title = editText_title.getText().toString();
-                if (isEmptyOrWhiteSpace(title)) {
-                    editText_title.setError("제목을 입력하세요");
-                    return;
-                }
-                EditText editText_content = (EditText) findViewById(R.id.editText_content);
-                String body = editText_content.getText().toString();
-                if (isEmptyOrWhiteSpace(body)) {
-                    editText_content.setError("내용을 입력하세요");
-                    return;
-                }
-                Memo memo = new Memo(title, body, new Date());
+
+
+                Memo memo = new Memo(title, new Date());
                 Intent intent = new Intent();
                 intent.putExtra("MEMO", memo);
                 setResult(RESULT_OK, intent);
